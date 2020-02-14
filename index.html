@@ -5,9 +5,15 @@
     <title>Vulnerable Web App</title>
   </head>
   <body>
-    <form class="formulario" action="script1.php" method="post">
-      <input type="text" name="data1" placeholder="Write something">
-      <button type="button" name="button1">Submit</button>
+    <h2>Form with GET method</h2>
+    <form class="formulario-get" action="script-get.php" method="get">
+      <input type="text" name="data-get" placeholder="Write something">
+      <button type="button" name="button-get">Submit</button>
+    </form>
+    <h2>Form with POST method</h2>
+    <form class="formulario-post" action="script-post.php" method="post">
+      <input type="text" name="data-post" placeholder="Write something">
+      <button type="button" name="button-post">Submit</button>
     </form>
   </body>
 </html>
