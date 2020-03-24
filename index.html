@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>You have not permission</title>
-	<style type="text/css">
-		p {
-			font-size: 30px;
-			color: rgb(54, 116, 141);
-		}
-	</style>
-</head>
-<body>
-	<center>
-		<img src = "homer.jpg" />
-		<p>You have not permission for navigate in this page</p>
-	</center>
-</body>
+	<head>
+		<title>Vulnerable Web App</title>
+		<meta charset="utf-8">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<form action="s_get.php" method="get" class="form-group">
+				<label for="f_get1">Input for SQL Injection in GET method</label>
+				<input type="text" name="f_get1" placeholder="SQL injection here" class="form-control form-control-lg">
+				<input type="submit" value="Submit" class="btn btn-primary">
+			</form>
+		</div>
+		<div class="container">
+			<form action="s_post.php" method="post" class="form-group">
+				<label for="f_post1">Input for SQL Injection in POST method</label>
+				<input type="text" name="f_post1" placeholder="SQL injection here" class="form-control form-control-lg">
+				<input type="submit" value="Submit" class="btn btn-primary">
+			</form>
+		</div>
+	</body>
 </html>
