@@ -14,9 +14,10 @@
   $input = $_GET['f_get1'];
 
   $sql = "SELECT * FROM Persons" . $input;
+  echo $sql . "<br>"
 
   if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
+    echo "New record created successfully <br>";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
