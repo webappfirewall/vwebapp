@@ -1,5 +1,5 @@
 <?php
-  $server = "192.168.17.150";
+  $server = "localhost";
   $usr = "root";
   $pwd = "Qw3rt&.12345";
 
