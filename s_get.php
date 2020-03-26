@@ -10,5 +10,16 @@
   if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
   }
-  echo "Connected successfully";
+
+  $input = $_GET['f_get1'];
+
+  $sql = "SELECT * FROM Persons" . $input;
+
+  if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
+
+  mysqli_close($conn);
 ?>
