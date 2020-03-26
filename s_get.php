@@ -1,6 +1,6 @@
 <?php
   $server = "localhost";
-  $usr = "root";
+  $usr = "u_db";
   $pwd = "Qw3rt&.12345";
 
   echo 'Conecting with MySQL Server...';
