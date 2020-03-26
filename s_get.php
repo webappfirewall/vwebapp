@@ -3,7 +3,7 @@
   $usr = "u_db";
   $pwd = "Qw3rt&.12345";
 
-  echo 'Conecting with MySQL Server...' . <br>;
+  echo 'Conecting with MySQL Server...';
 
   $conn = mysqli_connect($server, $usr, $pwd);
 
