@@ -1,9 +1,9 @@
 <?php
   $server = "192.168.17.150";
-  $usr = "root";
+  $usr = "u_db";
   $pwd = "Qw3rt&.12345";
 
-  echo 'Conecting with MySQL Server...';
+  echo 'Conecting with MySQL Server...' . <br>;
 
   $conn = mysqli_connect($server, $usr, $pwd);
 
