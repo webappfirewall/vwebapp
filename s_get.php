@@ -1,6 +1,4 @@
 <?php
-  echo 'Hello from s_get.php <br>';
-
   $servername = "localhost";
   $username = "usr_db";
   $password = "Qw3rt&.12345";
@@ -11,12 +9,9 @@
   // Check connection
   if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
-  } else {
-    echo 'Connected sucessfully <br>';
   }
 
   $input = $_GET['f_get1'];
-  echo "input: " . $input;
 
   $sql = "SELECT * FROM Persons" . $input;
   echo "SQL> " . $sql . "<br>";
