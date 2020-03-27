@@ -17,7 +17,7 @@
   $sql .= "INSERT INTO Products VALUES (4 , 'Samsung', 'S 20+', 'Smartphone', 0);";
   $sql .= "INSERT INTO Products VALUES (5 , 'Samsung', 'A 20', 'Smartphone', 0);";
   $sql .= "INSERT INTO Products VALUES (6 , 'Samsung', 'M 10s', 'Smartphone', 1);";
-  $sql .= "INSERT INTO MyGuests VALUES (7 , 'Samsung', 'Note 10+', 'Smartphone', 1)";
+  $sql .= "INSERT INTO Products VALUES (7 , 'Samsung', 'Note 10+', 'Smartphone', 1)";
 
   if (mysqli_multi_query($conn, $sql)) {
       echo "New records created successfully";
