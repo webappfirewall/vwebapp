@@ -2,7 +2,7 @@
   echo 'Hello from s_get.php <br>';
 
   $servername = "localhost";
-  $username = "root";
+  $username = "usr_db";
   $password = "Qw3rt&.12345";
 
   // Create connection
