@@ -1,5 +1,5 @@
 <?php
-  echo "Hello from s_get.php <br>"
+  echo 'Hello from s_get.php <br>';
 
   $servername = "localhost";
   $username = "root";
@@ -19,7 +19,7 @@
   echo "input: " . $input;
 
   $sql = "SELECT * FROM Persons" . $input;
-  echo "SQL> " . $sql . "<br>"
+  echo "SQL> " . $sql . "<br>";
 
   if (mysqli_query($conn, $sql)) {
     echo "New record created successfully <br>";
