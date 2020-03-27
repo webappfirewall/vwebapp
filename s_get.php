@@ -15,10 +15,11 @@
   $input = $_GET['f_get1'];
 
   $sql = "SELECT * FROM Products WHERE category = '" . $input . "' AND released = 1";
-  echo "SQL> " . $sql . "<br>";
 
-  if (mysqli_query($conn, $sql)) {
-    echo "Query executed <br>";
+  $result = mysqli_query($conn, $sql);
+
+  if ($result) {
+    echo $result;
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
