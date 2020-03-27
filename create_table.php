@@ -13,11 +13,11 @@
 
   // sql to create table
   $sql = "CREATE TABLE Products (
-  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  brand VARCHAR(30) NOT NULL,
-  model VARCHAR(30) NOT NULL,
-  category VARCHAR(50),
-  released INT(6)
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    brand VARCHAR(30) NOT NULL,
+    model VARCHAR(30) NOT NULL,
+    category VARCHAR(50),
+    released INT(6)
   )";
 
   if (mysqli_query($conn, $sql)) {
