@@ -1,6 +1,6 @@
 <?php
   $servername = "localhost";
-  $username = "u_db";
+  $username = "root";
   $password = "Qw3rt&.12345";
 
   // Create connection
@@ -9,12 +9,15 @@
   // Check connection
   if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
+  } else {
+    echo 'Connected sucessfully <br>';
   }
 
   $input = $_GET['f_get1'];
+  echo "input: " . $input;
 
   $sql = "SELECT * FROM Persons" . $input;
-  echo $sql . "<br>"
+  echo "SQL> " . $sql . "<br>"
 
   if (mysqli_query($conn, $sql)) {
     echo "New record created successfully <br>";
