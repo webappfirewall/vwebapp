@@ -1,4 +1,6 @@
 <?php
+  echo "Hello from s_get.php <br>"
+
   $servername = "localhost";
   $username = "root";
   $password = "Qw3rt&.12345";
