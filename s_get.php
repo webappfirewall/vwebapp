@@ -2,9 +2,10 @@
   $servername = "localhost";
   $username = "usr_db";
   $password = "Qw3rt&.12345";
+  $db = "vwebapp";
 
   // Create connection
-  $conn = mysqli_connect($servername, $username, $password);
+  $conn = mysqli_connect($servername, $username, $password, $db);
 
   // Check connection
   if (!$conn) {
@@ -17,7 +18,7 @@
   echo "SQL> " . $sql . "<br>";
 
   if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully <br>";
+    echo "Query executed <br>";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
