@@ -7,6 +7,37 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	</head>
 	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <a class="navbar-brand" href="#">Vulnerable Web App</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">SQL-RHD</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">SQL-SAL</a>
+		      </li>
+					<li class="nav-item">
+		        <a class="nav-link" href="#">SQL-UA</a>
+		      </li>
+					<li class="nav-item">
+		        <a class="nav-link" href="#">SQL-ED</a>
+		      </li>
+					<li class="nav-item">
+		        <a class="nav-link" href="#">Reflected XSS</a>
+		      </li>
+					<li class="nav-item">
+		        <a class="nav-link" href="#">Stored XSS</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
 		<div class="container">
 			<form action="s_get.php" method="get" class="form-group">
 				<label for="f_get1">Input for SQL Injection in GET method</label>
