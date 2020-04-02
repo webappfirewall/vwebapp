@@ -14,7 +14,7 @@
 
   $input = $_GET['f_get1'];
 
-  $sql = "SELECT * FROM Products WHERE category = '" . $input . "' AND released = 1";
+  $sql = "SELECT * FROM Products WHERE category = '$input' AND released = 1";
 
   $result = mysqli_query($conn, $sql);
 
