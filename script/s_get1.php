@@ -18,8 +18,9 @@
   if (mysqli_num_rows($result) > 0) {
       // output data of each row
       while($row = mysqli_fetch_assoc($result)) {
-          echo "Name: " . $row["Name"]. " Population: " . $row["Population"]. "<br>";
+          echo "Name: " . $row["name"]. " Population: " . $row["population"]. "<br>";
       }
+      echo "Done";
   } else {
       echo "0 results";
   }
