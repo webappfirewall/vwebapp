@@ -1,6 +1,6 @@
 <?php
   $servername = "192.168.17.150";
-  $username = "mysqlu";
+  $username = "root";
   $password = "Qw3rt&.12345";
 
   // Create connection
