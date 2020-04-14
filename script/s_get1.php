@@ -32,11 +32,19 @@
             <th scope='col'>Population</th>
           </tr>
         </thead>
+        <tbody>
       ";
       while($row = mysqli_fetch_assoc($result)) {
-          echo "Name: " . $row["Name"] . "\tCountryCode: " . $row["CountryCode"] . "\tDistrict: " . $row["District"] . "\tPopulation: " . $row["Population"] . "<br>";
+          echo '
+          <tr>
+            <th scope="row">$row["ID"]</th>
+            <td>$row["Name"]</td>
+            <td>$row["CountryCode"]</td>
+            <td>$row["District"]</td>
+            <td>$row["Population"]</td
+          </tr>
+          ';
       }
-      echo "Done";
   } else {
       echo "0 results";
   }
