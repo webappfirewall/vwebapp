@@ -37,11 +37,11 @@
       while($row = mysqli_fetch_assoc($result)) {
           echo "
           <tr>
-            <th scope='row'>$row['ID']</th>
-            <td>$row['Name']</td>
-            <td>$row['CountryCode']</td>
-            <td>$row['District']</td>
-            <td>$row['Population']</td
+            <th scope='row'>" . $row['ID'] . "</th>
+            <td>" . $row['Name'] . "</td>
+            <td>" . $row['CountryCode'] . "</td>
+            <td>" . $row['District'] . "</td>
+            <td>" . $row['Population'] . "</td
           </tr>
           ";
       }
