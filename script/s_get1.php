@@ -12,13 +12,15 @@
      die("Connection failed: " . mysqli_connect_error());
   }
 
-  $sql = "SELECT * FROM city limit 5";
+  $input1 = $_GET["input1"];
+
+  $sql = "SELECT * FROM city WHERE CountryCode = '$input1'";
   $result = mysqli_query($conn, $sql);
 
   if (mysqli_num_rows($result) > 0) {
       // output data of each row
       while($row = mysqli_fetch_assoc($result)) {
-          echo "Name: " . $row["Name"]. " Population: " . $row["Population"]. "<br>";
+          echo "Name: " . $row["Name"] . "\tCountryCode: " . $row["CountryCode"] . "\tDistrict: " . $row["District"] . "\tPopulation: " . $row["Population"] . "<br>";
       }
       echo "Done";
   } else {
