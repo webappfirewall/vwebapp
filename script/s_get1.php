@@ -19,7 +19,17 @@
 
   if (mysqli_num_rows($result) > 0) {
       // output data of each row
-
+      echo "
+      <table class='table'>
+        <thead>
+          <tr>
+            <th scope='col'>Name</th>
+            <th scope='col'>CountryCode</th>
+            <th scope='col'>District</th>
+            <th scope='col'>Population</th>
+          </tr>
+        </thead>
+      ";
       while($row = mysqli_fetch_assoc($result)) {
           echo "Name: " . $row["Name"] . "\tCountryCode: " . $row["CountryCode"] . "\tDistrict: " . $row["District"] . "\tPopulation: " . $row["Population"] . "<br>";
       }
