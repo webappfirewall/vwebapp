@@ -46,6 +46,11 @@
           </tr>
           ";
       }
+
+      echo "
+          </tbody>
+        </table>
+      ";
   } else {
       echo "0 results";
   }
