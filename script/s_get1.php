@@ -1,7 +1,7 @@
 <?php
   $servername = "192.168.17.150";
   $username = "root";
-  $password = "";
+  $password = "Qw3rt&.12345";
 
   // Create connection
   $conn = mysqli_connect($servername, $username, $password);
