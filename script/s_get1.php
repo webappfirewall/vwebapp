@@ -12,7 +12,7 @@
      die("Connection failed: " . mysqli_connect_error());
   }
 
-  $sql = "SELECT * FROM city";
+  $sql = "SELECT * FROM city limit 5";
   $result = mysqli_query($conn, $sql);
 
   if (mysqli_num_rows($result) > 0) {
