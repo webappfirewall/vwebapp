@@ -12,9 +12,9 @@
      die("Connection failed: " . mysqli_connect_error());
   }
 
-  $input1 = $_GET["input1"];
+  $countryCode = $_GET["countryCode"];
 
-  $sql = "SELECT * FROM city WHERE CountryCode = '$input1'";
+  $sql = "SELECT * FROM city WHERE CountryCode = '$countryCode'";
   $result = mysqli_query($conn, $sql);
 
   if (mysqli_num_rows($result) > 0) {
