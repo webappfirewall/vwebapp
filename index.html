@@ -1,133 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vulnerable Web App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/0dfe5e4635.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
+  </head>
+  <body>
     <!--Navegacion-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="#">vWeb App</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#sql">SQL Injection</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#xss">XSS</a>
-                </li>
-            </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#sql">SQL Injection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#xss">XSS</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
 
     <!--header-->
     <header class="main-header">
-        <div class="background-overlay text-white py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center justify-content-center align-self-center">
-                        <h1>Página de prueba WAF</h1>
-                        <p>Prototipo de sistema de seguridad, Web Application Firewall.</p>
-                    </div>
-                    <div class="col-md-12 text-center justify-content-center align-self-center py-4">
-                        <img src="img/seguridad.jpg" alt="" style="width: 50%;">
-                    </div>
-                </div>
+      <div class="background-overlay text-white py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center justify-content-center align-self-center">
+                <h1>Página de prueba WAF</h1>
+                <p>Prototipo de sistema de seguridad, Web Application Firewall.</p>
             </div>
+            <div class="col-md-12 text-center justify-content-center align-self-center py-4">
+              <img src="img/seguridad.jpg" style="width: 50%;">
+            </div>
+          </div>
         </div>
+      </div>
     </header>
 
     <!--formulario 1 y 2-->
     <section id="sql" class="bg-light py-2">
-        <div class="container">
-            <div class="row py-5 ml-auto">
-                <div class="col-md-6 text-center justify-content-center align-self-center">
-                    <h3>SQL Injection</h3>
-                    <p>Ataque de inyección SQL con método GET</p>
-                    <form class="form-group" action="script/s_get1.php" method="get">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <i class="fas fa-syringe input-group-text"></i>
-                            </div>
-                            <input type="text" class="form-control" style="height: 50%;" placeholder="Country Code" name="countryCode">
-                        </div>
-                        <button class="btn btn-outline-success">Send</button>
-                    </form>
+      <div class="container">
+        <div class="row py-5 ml-auto">
+          <div class="col-md-6 text-center justify-content-center align-self-center">
+            <h3>SQL Injection</h3>
+            <p>Ataque de inyección SQL con método GET</p>
+            <form class="form-group" action="script/s_get1.php" method="get">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-syringe input-group-text"></i>
                 </div>
-                <div class="col-md-6 text-center justify-content-center align-self-center">
-                    <h3>SQL Injection</h3>
-                    <p>Ataque de inyección SQL con método POST</p>
-                    <form class="form-group" action="script/s_post1.php" method="post">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <i class="fas fa-syringe input-group-text"></i>
-                            </div>
-                            <input type="text" class="form-control" style="height: 50%;" placeholder="User Name">
-                        </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <i class="fas fa-key input-group-text"></i>
-                            </div>
-                            <input type="password" class="form-control" style="height: 50%;" placeholder="Password">
-                        </div>
-                        <button class="btn btn-outline-success">Send</button>
-                    </form>
+                <input type="text" class="form-control" style="height: 50%;" placeholder="Country Code" name="countryCode">
+              </div>
+              <button class="btn btn-outline-success">Send</button>
+            </form>
+          </div>
+          <div class="col-md-6 text-center justify-content-center align-self-center">
+            <h3>SQL Injection</h3>
+            <p>Ataque de inyección SQL con método POST</p>
+            <form class="form-group" action="script/s_post1.php" method="post">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-syringe input-group-text"></i>
                 </div>
-            </div>
+                <input type="text" class="form-control" style="height: 50%;" placeholder="User Name">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-key input-group-text"></i>
+                </div>
+                <input type="password" class="form-control" style="height: 50%;" placeholder="Password">
+              </div>
+              <button class="btn btn-outline-success">Send</button>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
 
     <!--formulario 3 y 4-->
     <section id="xss" class="bg-light py-2">
-        <div class="container">
-            <div class="row py-5 ml-auto">
-                <div class="col-md-6 text-center justify-content-center align-self-center">
-                    <h3>XSS Atack</h3>
-                    <p>Ataque de XSS usando el método GET</p>
-                    <form class="form-group">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <i class="fas fa-scroll input-group-text"></i>
-                            </div>
-                            <input type="text" class="form-control" style="height: 50%;" placeholder="XSS Atack">
-                        </div>
-                        <button class="btn btn-outline-success">Send</button>
-                    </form>
+      <div class="container">
+        <div class="row py-5 ml-auto">
+          <div class="col-md-6 text-center justify-content-center align-self-center">
+            <h3>XSS Atack</h3>
+            <p>Ataque de XSS usando el método GET</p>
+            <form class="form-group">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-scroll input-group-text"></i>
                 </div>
-                <div class="col-md-6 text-center justify-content-center align-self-center">
-                    <h3>XSS Atack</h3>
-                    <p>Ataque de XSS usando el método POST</p>
-                    <form class="form-group">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <i class="fas fa-scroll input-group-text"></i>
-                            </div>
-                            <input type="text" class="form-control" style="height: 50%;" placeholder="XSS Atack">
-                        </div>
-                        <button class="btn btn-outline-success">Send</button>
-                    </form>
+                <input type="text" class="form-control" style="height: 50%;" placeholder="XSS Atack">
+              </div>
+              <button class="btn btn-outline-success">Send</button>
+            </form>
+          </div>
+          <div class="col-md-6 text-center justify-content-center align-self-center">
+            <h3>XSS Atack</h3>
+            <p>Ataque de XSS usando el método POST</p>
+            <form class="form-group">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-scroll input-group-text"></i>
                 </div>
-            </div>
+                <input type="text" class="form-control" style="height: 50%;" placeholder="XSS Atack">
+              </div>
+              <button class="btn btn-outline-success">Send</button>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
 
     <!--pie-->
     <footer>
-        <div class="container p-3 text-white text-center">
-            <p>Copyright &copy; 2020</p>
-        </div>
+      <div class="container p-3 text-white text-center">
+        <p>Copyright &copy; 2020</p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
