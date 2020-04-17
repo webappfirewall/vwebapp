@@ -11,4 +11,7 @@
   if (!$conn) {
      die("Connection failed: " . mysqli_connect_error());
   }
+
+  $userName = $_POST['userName'];
+  $password = $_POST['password'];
 ?>
