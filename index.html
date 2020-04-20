@@ -59,7 +59,7 @@
                 <div class="input-group-prepend">
                   <i class="fas fa-syringe input-group-text"></i>
                 </div>
-                <input type="text" class="form-control" style="height: 50%;" placeholder="Country Code" name="countryCode">
+                <input type="text" class="form-control" style="height: 50%;" placeholder="Country code" name="countryCode">
               </div>
               <button class="btn btn-outline-success">Send</button>
             </form>
@@ -72,7 +72,7 @@
                 <div class="input-group-prepend">
                   <i class="fas fa-syringe input-group-text"></i>
                 </div>
-                <input type="text" class="form-control" style="height: 50%;" placeholder="User Name" name="userName">
+                <input type="text" class="form-control" style="height: 50%;" placeholder="User name" name="userName">
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -94,12 +94,12 @@
           <div class="col-md-6 text-center justify-content-center align-self-center">
             <h3>XSS Atack</h3>
             <p>Ataque de XSS usando el método GET</p>
-            <form class="form-group">
+            <form class="form-group" action="script/s_get2.php" method="get">
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <i class="fas fa-scroll input-group-text"></i>
                 </div>
-                <input type="text" class="form-control" style="height: 50%;" placeholder="XSS Atack">
+                <input type="text" class="form-control" style="height: 50%;" placeholder="Write your name" name="name">
               </div>
               <button class="btn btn-outline-success">Send</button>
             </form>
@@ -107,12 +107,18 @@
           <div class="col-md-6 text-center justify-content-center align-self-center">
             <h3>XSS Atack</h3>
             <p>Ataque de XSS usando el método POST</p>
-            <form class="form-group">
+            <form class="form-group" action="script/s_post2.php" method="post">
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <i class="fas fa-scroll input-group-text"></i>
+                  <i class="fas fa-user-tag input-group-text"></i>
                 </div>
-                <input type="text" class="form-control" style="height: 50%;" placeholder="XSS Atack">
+                <input type="text" class="form-control" style="height: 50%;" placeholder="User tag" name="userTag">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-comments input-group-text"></i>
+                </div>
+                <textarea class="form-control" rows="3" placeholder="Write a comment" name="comment"></textarea>
               </div>
               <button class="btn btn-outline-success">Send</button>
             </form>
