@@ -2,7 +2,7 @@
   $servername = "192.168.17.150";
   $username = "mysqlu";
   $password = "Qw3rt&.12345";
-  $database = "world";
+  $database = "users";
 
   // Create connection
   $conn = mysqli_connect($servername, $username, $password, $database);
@@ -15,5 +15,12 @@
   $userName = $_POST['userName'];
   $password = $_POST['password'];
 
-  echo "Connected"
+  $sql = "SELECT * FROM users WHERE username = '$userName' AND password = '$password'";
+  $result = mysqli_query($conn, $sql);
+
+  if (mysqli_num_rows($result) > 0) {
+    echo "Usuario encontrado";
+  } else {
+    echo "Usuario NO encontrado";
+  }
 ?>
