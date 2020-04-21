@@ -19,7 +19,37 @@
   $result = mysqli_query($conn, $sql);
 
   if (mysqli_num_rows($result) > 0) {
-    echo "Usuario encontrado";
+    echo "
+    <head>
+      <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous'>
+      <script src='https://kit.fontawesome.com/0dfe5e4635.js' crossorigin='anonymous'></script>
+    </head>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th scope='col'></th>
+          <th scope='col'>User Name</th>
+          <th scope='col'>Password</th>
+        </tr>
+      </thead>
+      <tbody>
+    ";
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "
+        <tr>
+          <th scope='row'>
+            <i class='fas fa-info-circle'></i>
+          </th>
+          <td>" . $row['username'] . "</td>
+          <td>" . $row['password'] . "</td>
+        </tr>
+        ";
+    }
+
+    echo "
+        </tbody>
+      </table>
+    ";
   } else {
     echo "Usuario NO encontrado";
   }
