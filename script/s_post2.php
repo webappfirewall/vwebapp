@@ -36,6 +36,7 @@
       <table class='table'>
         <thead>
           <tr>
+            <th scope='col'></th>
             <th scope='col'>User Tag</th>
             <th scope='col'>Comment</th>
           </tr>
