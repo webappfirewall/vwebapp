@@ -12,15 +12,17 @@
      die("Connection failed: " . mysqli_connect_error());
   }
 
-  $userTag = $_POST['userTag'];
-  $comment = $_POST['comment'];
+  if (isset($_POST["userTag"], $_POST["comment"]) and $_POST["userTag"] <> "" and $_POST["comment"] <> "") {
+    $userTag = $_POST["userTag"];
+    $comment = $_POST["comment"];
 
-  $sql = "INSERT INTO comments (usertag, comment) VALUES ('Chema', 'Testing comments')";
+    $sql = "INSERT INTO comments (usertag, comment) VALUES ('$userTag', '$comment')";
 
-  if (mysqli_query($sql)) {
-    echo "New record created successfully";
-  } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    if (mysqli_query($sql)) {
+      echo "New record created successfully";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
   }
 
   $sql = "SELECT * FROM comments";
