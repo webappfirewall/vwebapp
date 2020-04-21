@@ -20,7 +20,7 @@
   if (mysqli_query($sql) === TRUE) {
     echo "New record created successfully";
   } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);;
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
 
   $sql = "SELECT * FROM comments";
