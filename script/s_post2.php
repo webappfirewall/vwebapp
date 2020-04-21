@@ -59,8 +59,6 @@
           </tbody>
         </table>
       ";
-  } else {
-      echo "0 results";
   }
 
   mysqli_close($conn);
