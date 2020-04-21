@@ -15,7 +15,7 @@
   $userName = $_POST['userName'];
   $password = $_POST['password'];
 
-  $sql = "SELECT * FROM users WHERE username = 'admin' AND password = 'OR '1'='1'";
+  $sql = "SELECT * FROM users WHERE username = '$userName' AND password = '$password'";
   $result = mysqli_query($conn, $sql);
 
   if (mysqli_num_rows($result) > 0) {
