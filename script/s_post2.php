@@ -15,9 +15,9 @@
   $userTag = $_POST['userTag'];
   $comment = $_POST['comment'];
 
-  $sql = "INSERT INTO comments (usertag, comment) VALUES ('$userTag', '$comment')";
+  $sql = "INSERT INTO comments (usertag, comment) VALUES ('Chema', 'Testing comments')";
 
-  if (mysqli_query($sql) === TRUE) {
+  if (mysqli_query($sql)) {
     echo "New record created successfully";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
